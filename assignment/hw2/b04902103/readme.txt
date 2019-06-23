@@ -1,0 +1,5 @@
+code4
+用到pycryptodome套件
+
+code5
+用到pycrypto套件
