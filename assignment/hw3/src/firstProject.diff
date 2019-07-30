@@ -1,0 +1,54 @@
+--- firstProject.cpp	2019-05-27 17:07:40.000000000 +0800
++++ firstProject_patch.cpp	2019-06-09 02:29:02.348342882 +0800
+@@ -17,6 +17,7 @@
+ 
+ unsigned int count = 0;
+ char *allperson[MAX * 3];
++
+ void init_proc()
+ {
+     setvbuf(stdin, 0, 2, 0);
+@@ -99,7 +100,7 @@
+         setage(uage);
+         project = new char[strlen(uproject)];
+         memcpy(project, uproject, strlen(uproject));
+-        usalary = salary;
++        salary = usalary;
+     }
+     ~PM()
+     {
+@@ -386,14 +387,14 @@
+     string name;
+     unsigned int age = 0;
+     unsigned int salary = 0;
+-    int idx = 0;
++    unsigned long idx = 0;
+     job_menu();
+     switch (read_long())
+     {
+     case 1:
+         cout << "index :";
+ 
+-        idx = read_int();
++        idx = read_long();
+         if (idx < MAX && pm_array[idx])
+         {
+             PM *tpm = NULL;
+@@ -405,7 +406,7 @@
+         break;
+     case 2:
+         cout << "index :";
+-        idx = read_int();
++        idx = read_long();
+ 
+         if (idx < MAX && rd_array[idx])
+         {
+@@ -417,7 +418,7 @@
+         break;
+     case 3:
+         cout << "index :";
+-        idx = read_int();
++        idx = read_long();
+         if (idx < MAX && hr_array[idx])
+         {
+             HR *thr = NULL;
