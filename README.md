@@ -1,2 +1,2 @@
 # CNS2019
-Cryptography and Network Security spring
+NTU CSIE Cryptography and Network Security 2019 Spring
